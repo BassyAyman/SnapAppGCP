@@ -1,0 +1,56 @@
+body, .centered {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #e8f3ff 0%, #f2f2ff 100%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #1A1A1D;
+  margin-bottom: 1rem;
+}
+
+
+.block {
+  display: flex;
+  max-width: 300px;
+  background: snow;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px #0003;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+label {
+  color: #5d4302;
+  margin-bottom: 0.5rem;
+}
+
+input[matInput] {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+button[mat-button] {
+  background: #e8e5ff;
+  border: none;
+  color: #1A1A1D;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+button[mat-button]:hover {
+  transform: translateY(-2px);
+}

@@ -1,0 +1,176 @@
+/* Global Styles */
+/** {*/
+/*  box-sizing: border-box;*/
+/*  font-family: 'Roboto', sans-serif;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  outline: none;*/
+/*  color: #1A1A1D;*/
+/*}*/
+
+.max-height {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: #e8e5ff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #1A1A1D; */
+  background: linear-gradient(180deg, #e8f3ff 0%, #f2f2ff 100%);
+}
+
+.my-message, .received-message {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  max-width: 70%;
+  align-self: flex-start; /* default alignment */
+}
+
+.my-message {
+  align-self: flex-end; /* aligns to the right */
+  background: snow; /* Slightly different dark for your message */
+  border: 1px solid #ffffff; /* Slight variation for border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.received-message {
+  background: #fff9f5; /* Different shade for received messages */
+  border: 1px solid #BDBDBD; /* Slight variation for border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Mdate {
+  font-size: 0.8rem;
+  color: #a1a1a1; /* Slightly brighter color for date */
+  margin-bottom: 0.5rem;
+}
+
+.Msender, .Mreceiver {
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+.Msender {
+  color: #5d4302;
+}
+
+.Mreceiver {
+  color: #292975;
+}
+
+.Mcontent {
+  margin-top: 0.5rem;
+}
+
+/* Adjustments for footer styling */
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #e1e1e1;
+  position: relative;
+  background-color: snow;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 5px;
+  background-color: #E9E9E9;
+  border-radius: 100px;
+}
+
+mat-form-field {
+  flex: 4;
+  background-color: #E9E9E9;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+mat-form-field input {
+  background-color: transparent;
+  padding: 0.8rem 1rem;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.5;
+  position: relative;
+}
+
+.footer div::before {
+  content: "📎"; /* Using an emoji for visual cue */
+  position: absolute;
+  font-size: 1.2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+.footer div input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+mat-form-field:nth-child(2) {
+  flex: 1;
+  margin-left: 0.5rem;
+  background-color: #E9E9E9;
+  border-radius: 15px;
+}
+
+mat-form-field:nth-child(2) input {
+  background-color: transparent;
+}
+
+/*button[mat-icon-button] {*/
+/*  border-radius: 50%;*/
+/*  width: 40px;*/
+/*  height: 40px;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  box-shadow: 0 2px 5px rgba(38, 38, 38, 0.15);*/
+/*}*/
+
+.displayImage {
+  border-radius: 12px;
+}

@@ -1,0 +1,54 @@
+<section class="max-height">
+  <div class="header">
+    <button [routerLink]="['/home']" color="primary" mat-icon-button>
+      <mat-icon>home</mat-icon>
+    </button>
+    <h1>Chatting with <span class="Mreceiver">{{user}}</span></h1>
+  </div>
+
+  <div class="content">
+    <div *ngFor="let message of messages"
+         [ngClass]="{'my-message': isMyMessage(message), 'received-message': !isMyMessage(message)}">
+
+      <p>
+        <span class="Mdate">{{message.creationDate | date: 'dd/MM/yyyy HH\'h\'mm'}}</span>
+        from <span class="Msender">{{message.sender}}</span> to
+        <span class="Mreceiver">{{message.receiver}}</span>:
+      </p>
+      <p class="Mcontent">{{message.content}}</p>
+
+      <ng-container *ngIf="isImageMessage(message)">
+        <ng-container *ngIf="!isImageOutdated(message)">
+          <button (click)="displayImage(message)" class="displayImage" mat-raised-button>Display image</button>
+        </ng-container>
+        <ng-container *ngIf="isImageOutdated(message)">
+          <p>This image is outdated</p>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="footer">
+    <mat-form-field>
+      <input (keyup.enter)="sendMessage()"
+             [(ngModel)]="currentMessage"
+             matInput
+             placeholder="Enter your message"
+             type="text">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input (keyup.enter)="sendMessage()"
+             [(ngModel)]="durationInMinutes"
+             matInput
+             placeholder="Lifespan (in minutes)"
+             type="number">
+    </mat-form-field>
+
+    <input type="file" placeholder="Choose an image" (change)="onFileChange($event)">
+
+    <button (click)="sendMessage()" color="primary" mat-icon-button>
+      <mat-icon>send</mat-icon>
+    </button>
+  </div>
+</section>

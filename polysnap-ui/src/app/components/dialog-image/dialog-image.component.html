@@ -1,0 +1,12 @@
+<!--<mat-spinner *ngIf="loading" style="width: 100%"></mat-spinner>-->
+
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>from {{data.sender}} <!-- to {{data.receiver}} --></mat-card-title>
+    <mat-card-subtitle>Posted: {{timeAgo}}, Duration: {{data.durationInMinutes}} minutes</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content *ngIf="imageData">
+    <img [src]="imageData" alt="Unavailable" class="imageMax">
+  </mat-card-content>
+</mat-card>

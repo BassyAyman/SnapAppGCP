@@ -1,0 +1,31 @@
+<header>
+  <h1>Logged as <strong>{{currentUser}}</strong></h1>
+  <button mat-button (click)="logout()">
+    <mat-icon fontIcon="logout"></mat-icon>
+  </button>
+</header>
+
+<div class="user-selection">
+  <h2>Chats</h2>
+  <div class="users-grid">
+    <ng-container *ngFor="let user of allUsers">
+      <button [matMenuTriggerFor]="menu" mat-button>{{user}}
+        <mat-icon *ngIf="usersWithStories.includes(user)" aria-hidden="false" aria-label="User has stories">book
+        </mat-icon>
+      </button>
+
+      <!-- Dropdown menu -->
+      <mat-menu #menu="matMenu">
+        <button [routerLink]="['/chat', user]" mat-menu-item>Chat</button>
+        <button (click)="loadUserStories(user)" *ngIf="usersWithStories.includes(user)" mat-menu-item>View Stories
+        </button>
+      </mat-menu>
+    </ng-container>
+  </div>
+</div>
+
+
+<div class="user-selection">
+  <button (click)="fileInput.click()" mat-raised-button>Add File to Story</button>
+  <input #fileInput (change)="onFileSelected($event)" style="display:none;" type="file">
+</div>

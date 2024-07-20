@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_d8af538d-b1aa-44b8-896c-5b7c317631ef",
+      "org_id": "orga_0882faed-38cb-4e2c-b2b5-fadf9c9c1df5",
+      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_d8af538d-b1aa-44b8-896c-5b7c317631ef.git",
+      "name": "Messages API cli deployment",
+      "alias": "Messages-API-cli-deployment"
+    }
+  ]
+}

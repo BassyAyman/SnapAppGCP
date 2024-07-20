@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_e99c4068-2ad7-496c-927e-765c5ef72da5",
+      "org_id": "orga_0882faed-38cb-4e2c-b2b5-fadf9c9c1df5",
+      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_e99c4068-2ad7-496c-927e-765c5ef72da5.git",
+      "name": "Read Messages API",
+      "alias": "Read-Messages-API"
+    }
+  ]
+}
